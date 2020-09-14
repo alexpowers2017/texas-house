@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>125th House District</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+    <link href="fontawesome/css/all.min.css" rel="stylesheet" />
+    <link href="css/tooplate-chilling-cafe.css" rel="stylesheet" />
+      <link rel="stylesheet" href="styles.css">
+<!--
+Tooplate 2118 Chilling Cafe
+https://www.tooplate.com/view/2118-chilling-cafe
+-->
+  </head>
+  <body>
+    <div class="tm-container">
+      <div class="tm-text-white tm-page-header-container">
+
+        <h1 class="tm-page-header">Texas House District 125</h1>
+        <h3 >Joint Primary Election - February 12th, 2020</h3>
+      </div>
+      <div class="tm-main-content">
+
+        <!-- Coffee Menu -->
+        <div id="wrapper">
+          <div id="map" ></div>
+          <div id="tooltip" class="hidden"></div>
+          <!-- <div id="donut" class="hidden"></div> -->
+        </div>
+
+        <!-- About our cafe -->
+        <section class="tm-section tm-section-small">
+          <h2 class="tm-section-header">Sources</h2>
+          <p>
+            Election results data was collected from Bexar County Elections Department <a href='https://www.bexar.org/2186/Historical-Election-Results'>here</a>.
+          </p>
+          <p class="tm-mb-0">
+            Precinct mapping data was collected from Bexar County <a href='https://gis-bexar.opendata.arcgis.com/datasets/fb8f86213f55402396f27d38ea67eb58_0'>here</a>.
+          </p>
+        </section>
+        <hr />
+        <!-- Talk to us -->
+        <section class="tm-section tm-section-small">
+          <h2 class="tm-section-header">Contact Me</h2>
+          <p class="tm-mb-0">
+            Reach me via
+            <a href="mailto:alexpowers2017@gmail.com" class="tm-contact-link">Email</a>
+            if you have any questions about this visualization.
+          </p>
+
+        </section>
+      </div>
+
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://d3js.org/d3.v4.min.js" samesite=None></script>
+    <script src="script.js"></script>
+    <script async="false"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaOjHAr-qxl6XOiuHP1CAC9NMXrlEAj0Y&libraries=&v=weekly"
+      defer
+    ></script>
+    <script>
+      $(function() {
+        // Adjust intro image height based on width.
+        $(window).resize(function() {
+          var img = $("#tm-intro-img");
+          var imgWidth = img.width();
+
+          // 640x425 ratio
+          var imgHeight = (imgWidth * 425) / 640;
+
+          if (imgHeight < 300) {
+            imgHeight = 300;
+          }
+
+          img.css("min-height", imgHeight + "px");
+        });
+      });
+    </script>
+  </body>
+</html>
